@@ -1,5 +1,7 @@
 import React, { useState, useMemo, useEffect } from 'react';
 import AddTransaction from './AddTransaction';
+import ExpensesChart from './ExpensesChart';
+
 
 const categories = ['All', 'Food', 'Transportation', 'Entertainment', 'Bills', 'Other'];
 
@@ -67,20 +69,22 @@ const BudgetTracker = () => {
       <ul>
         {filteredTransactions.map(transaction => (
           <li key={transaction.id}>
-            {transaction.description} - ${transaction.amount.toFixed(2)} 
-            ({transaction.type}) - {transaction.category}
-            <button onClick={() => handleDeleteTransaction(transaction.id)}>Delete</button>
-            <button onClick={() => {
-              // Here you would typically open a modal or form to edit the transaction
-              // For simplicity, we'll just update the amount
-              const newAmount = prompt('Enter new amount:', transaction.amount);
-              if (newAmount) {
-                handleEditTransaction(transaction.id, { amount: parseFloat(newAmount) });
-              }
-            }}>Edit</button>
+            <span>{transaction.description} - ${transaction.amount.toFixed(2)} 
+            ({transaction.type}) - {transaction.category}</span>
+            <div className="transaction-buttons">
+              <button className="edit-btn" onClick={() => {
+                const newAmount = prompt('Enter new amount:', transaction.amount);
+                if (newAmount) {
+                  handleEditTransaction(transaction.id, { amount: parseFloat(newAmount) });
+                }
+              }}>Edit</button>
+              <button className="delete-btn" onClick={() => handleDeleteTransaction(transaction.id)}>Delete</button>
+            </div>
           </li>
         ))}
       </ul>
+      <h2>Expenses by Category</h2>
+      <ExpensesChart transactions={transactions} />
     </div>
   );
 };

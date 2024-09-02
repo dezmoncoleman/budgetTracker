@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import BudgetTracker from './components/BudgetTracker'
-import './App.css'
+
 
 function App() {
   
