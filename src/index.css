@@ -1,8 +1,9 @@
 .budget-tracker {
-  max-width: 800px;
+  max-width: 1000px;
   margin: 0 auto;
   padding: 20px;
   font-family: Arial, sans-serif;
+  font-size: 14px;
 }
 
 .summary {
@@ -26,8 +27,8 @@ form {
 }
 
 input, select, button {
-  padding: 10px;
-  font-size: 16px;
+  padding: 8px;
+  font-size: 14px;
 }
 
 button {
@@ -101,4 +102,236 @@ code {
   display: flex;
   justify-content: center;
   padding: 20px;
+}
+
+.chart-controls {
+  margin-bottom: 20px;
+}
+
+.chart-controls select {
+  margin-right: 10px;
+}
+
+.transaction-date {
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.date-picker-button {
+  background-color: #2196F3; /* Blue color */
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  cursor: pointer;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.date-picker-button:hover {
+  background-color: #1976D2; /* Darker blue on hover */
+}
+
+.react-datepicker-wrapper {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.filters {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.filters select {
+  padding: 8px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+.transactions-list table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.transactions-list th,
+.transactions-list td {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+  font-size: 12px;
+}
+
+.transactions-list th {
+  background-color: #f2f2f2;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.transactions-list tr:hover {
+  background-color: #f5f5f5;
+}
+
+.transactions-list .income {
+  color: #4CAF50;
+}
+
+.transactions-list .expense {
+  color: #F44336;
+}
+
+.edit-btn,
+.delete-btn {
+  padding: 4px 8px;
+  margin-right: 5px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+.edit-btn {
+  background-color: #2196F3;
+  color: white;
+}
+
+.delete-btn {
+  background-color: #F44336;
+  color: white;
+}
+
+.edit-btn:hover,
+.delete-btn:hover {
+  opacity: 0.8;
+}
+
+.transaction-group {
+  margin-bottom: 20px;
+}
+
+.transaction-group h3 {
+  background-color: #f0f0f0;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+
+.transaction-date {
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.transaction-description {
+  flex-grow: 1;
+}
+
+.transactions-list ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.transactions-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.transactions-list li:last-child {
+  border-bottom: none;
+}
+
+.budget-tracker button {
+  padding: 10px 15px;
+  margin-top: 20px;
+  background-color: #f44336;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.budget-tracker button:hover {
+  background-color: #d32f2f;
+}
+
+.add-transaction-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.add-transaction-form input,
+.add-transaction-form select,
+.add-transaction-form .react-datepicker-wrapper {
+  flex: 1;
+  min-width: 120px;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.add-transaction-form button {
+  padding: 8px 16px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.add-transaction-form button:hover {
+  background-color: #45a049;
+}
+
+.transactions-list.recent {
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+.day-transactions {
+  margin-bottom: 20px;
+}
+
+.day-transactions h3 {
+  font-size: 16px;
+  margin-bottom: 10px;
+  background-color: #f0f0f0;
+  padding: 5px 10px;
+  border-radius: 4px;
+}
+
+.transactions-list table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.transactions-list th,
+.transactions-list td {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+  font-size: 12px;
+}
+
+.transactions-list th {
+  background-color: #f2f2f2;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.transactions-list tr:hover {
+  background-color: #f5f5f5;
+}
+
+.income {
+  color: #4CAF50;
+}
+
+.expense {
+  color: #F44336;
 }
